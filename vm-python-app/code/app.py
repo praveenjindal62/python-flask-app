@@ -3,6 +3,9 @@ import os
 app = Flask(__name__)
 
 content = os.getenv('VMAPP_CONTENT', 'VMApp Default Content')
+if len(content) == 0:
+    content = 'VMApp Default Content'
+    
 @app.route('/')
 def hello():
     return content
