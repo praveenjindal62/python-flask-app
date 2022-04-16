@@ -16,4 +16,4 @@ def get_data():
         return "<H1>" + requests.get(VM_URL).content.decode("utf-8") + "</H1>"
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0",port=80)
