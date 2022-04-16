@@ -4,4 +4,4 @@ RUN apk add --no-cache python3 py3-pip && pip install -r /tmp/requirements.txt &
 WORKDIR /opt/app
 COPY code .
 RUN chmod +x startup.sh
-ENTRYPOINT ["startup.sh"]
+ENTRYPOINT ["./startup.sh"]
