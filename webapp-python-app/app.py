@@ -10,7 +10,7 @@ def hello():
 
 @app.route('/test')
 def get_data():
-    return "<H1>" + requests.get(VM_URL).content + "</H1>"
+    return "<H1>" + requests.get(VM_URL).content.decode("utf-8") + "</H1>"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
