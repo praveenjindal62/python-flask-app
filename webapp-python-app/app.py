@@ -9,7 +9,7 @@ def hello():
 
 @app.route('/test')
 def get_data():
-    return requests.get('http://localhost:5100').content
+    return "<H1>" + requests.get('http://localhost:5100').content + "</H1>"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
